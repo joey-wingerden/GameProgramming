@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>504</y>
+      <w>240</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Falling
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>228</x>
+      <y>504</y>
+      <w>180</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>Idle
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>276</y>
+      <w>192</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Movement
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>72</y>
+      <w>168</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>running
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>756</y>
+      <w>192</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>menu
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>588</y>
+      <w>324</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+onground</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>528</y>
+      <w>324</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+jump</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>372</y>
+      <w>120</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+standingstill</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>372</y>
+      <w>72</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+wasd</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>276</y>
+      <w>312</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+jump</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>324</y>
+      <w>312</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+onground</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>684</x>
+      <y>288</y>
+      <w>240</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>MovementAndFalling
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>732</x>
+      <y>372</y>
+      <w>120</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+standingstill</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>864</x>
+      <y>372</y>
+      <w>72</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+wasd</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>228</x>
+      <y>624</y>
+      <w>84</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+escape</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>624</y>
+      <w>84</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+escape</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>228</x>
+      <y>144</y>
+      <w>84</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+noshift</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>348</x>
+      <y>144</y>
+      <w>60</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+shift</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>72</y>
+      <w>240</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>bigjump
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>60</y>
+      <w>312</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+jump</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>372</x>
+      <y>108</y>
+      <w>312</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+onground</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+</diagram>
