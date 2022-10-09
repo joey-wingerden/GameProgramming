@@ -14,7 +14,7 @@ public class Jumping : State
         jump(3);
     }
     public override void run(){
-       context.Change(new Falling());
+       context.Change(context.falling);
     }
 
     

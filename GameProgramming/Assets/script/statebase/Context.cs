@@ -15,6 +15,14 @@ public class Context
     public float gravity;
     public  Vector3 velocity;
     public float speed;
+
+
+    //states
+    public State falling = new Falling();
+    public State jumping = new Jumping();
+    public State idle = new Idle();
+    public State movement = new Movement();
+    public State running = new Running();
      
 
     

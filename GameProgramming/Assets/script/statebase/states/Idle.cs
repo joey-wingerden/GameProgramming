@@ -19,13 +19,13 @@ public class Idle : State
     
     public override void run(){
        if(checkmovement()){
-            context.Change(new Movement());
+            context.Change(context.movement);
         }
         if(jump()){
-            context.Change(new Jumping());
+            context.Change(context.jumping);
         }
         if(!isGrounded(context.controller)){
-            context.Change(new Falling());
+            context.Change(context.falling);
         }
         look(context);
     }

@@ -13,13 +13,16 @@ public class Movement : State
     }
     public override void run(){
         if(!checkmovement()){
-            context.Change(new Idle());
+            context.Change(context.idle);
         }
         if(jump()){
-            context.Change(new Jumping());
+            context.Change(context.jumping);
         }
         if(!isGrounded(context.controller)){
-            context.Change(new Falling());
+            context.Change(context.falling);
+        }
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            context.Change(context.running);
         }
         move();
         look(context);

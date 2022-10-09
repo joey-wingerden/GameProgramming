@@ -25,7 +25,15 @@ using UnityEngine;
         return false;
     }
     protected bool isGrounded(CharacterController controller){
-        return Physics.Raycast(controller.transform.position, Vector3.down, 1.09f);;
+        if(Physics.Raycast(controller.transform.position, Vector3.down, 1.09f)){ return true;}
+
+        float extentie = 0.5f;
+        if(Physics.Raycast(controller.transform.position - new Vector3(extentie, 0, 0), Vector3.down, 1.09f)){ return true;}
+        if(Physics.Raycast(controller.transform.position - new Vector3(-extentie, 0, 0), Vector3.down, 1.09f)){ return true;}
+
+        if(Physics.Raycast(controller.transform.position - new Vector3(0, 0, extentie), Vector3.down, 1.09f)){ return true;}
+        if(Physics.Raycast(controller.transform.position - new Vector3(0, 0, -extentie), Vector3.down, 1.09f)){ return true;}
+        return false;
     }
 
 

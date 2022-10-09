@@ -17,7 +17,7 @@ public class Falling : State
     public override void run(){
         if(isGrounded((context.controller))){
             context.velocity.y = 0;
-            context.Change(new Idle());
+            context.Change(context.idle);
         }
 
         setgravity();
