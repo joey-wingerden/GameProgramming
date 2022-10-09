@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.0.0">
-  <zoom_level>12</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>696</x>
-      <y>504</y>
-      <w>240</w>
-      <h>120</h>
+      <x>810</x>
+      <y>216</y>
+      <w>180</w>
+      <h>441</h>
     </coordinates>
     <panel_attributes>Falling
 
@@ -17,10 +17,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>228</x>
-      <y>504</y>
-      <w>180</w>
-      <h>132</h>
+      <x>405</x>
+      <y>549</y>
+      <w>135</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>Idle
 
@@ -31,10 +31,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>216</x>
-      <y>276</y>
-      <w>192</w>
-      <h>108</h>
+      <x>396</x>
+      <y>378</y>
+      <w>144</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>Movement
 
@@ -45,10 +45,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>216</x>
-      <y>72</y>
-      <w>168</w>
-      <h>84</h>
+      <x>396</x>
+      <y>225</y>
+      <w>126</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>running
 
@@ -57,50 +57,24 @@
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>216</x>
-      <y>756</y>
-      <w>192</w>
-      <h>144</h>
-    </coordinates>
-    <panel_attributes>menu
-
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>588</y>
-      <w>324</w>
-      <h>48</h>
+      <x>531</x>
+      <y>612</y>
+      <w>297</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 onground</panel_attributes>
-    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>528</y>
-      <w>324</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;
-jump</panel_attributes>
-    <additional_attributes>10.0;20.0;250.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>240</x>
-      <y>372</y>
-      <w>120</w>
-      <h>156</h>
+      <x>414</x>
+      <y>450</y>
+      <w>90</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 standingstill</panel_attributes>
@@ -109,10 +83,10 @@ standingstill</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>372</x>
-      <y>372</y>
-      <w>72</w>
-      <h>156</h>
+      <x>513</x>
+      <y>450</y>
+      <w>54</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
 wasd</panel_attributes>
@@ -121,95 +95,22 @@ wasd</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>396</x>
-      <y>276</y>
-      <w>312</w>
-      <h>48</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;
-jump</panel_attributes>
-    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>396</x>
-      <y>324</y>
-      <w>312</w>
-      <h>48</h>
+      <x>531</x>
+      <y>423</y>
+      <w>297</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
-onground</panel_attributes>
-    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>684</x>
-      <y>288</y>
-      <w>240</w>
-      <h>96</h>
-    </coordinates>
-    <panel_attributes>MovementAndFalling
-
-</panel_attributes>
-    <additional_attributes/>
+onground + move</panel_attributes>
+    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>732</x>
-      <y>372</y>
-      <w>120</w>
-      <h>156</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-standingstill</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>864</x>
-      <y>372</y>
-      <w>72</w>
-      <h>156</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;
-wasd</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>228</x>
-      <y>624</y>
-      <w>84</w>
-      <h>156</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-escape</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>360</x>
-      <y>624</y>
-      <w>84</w>
-      <h>156</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;&gt;
-escape</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>228</x>
-      <y>144</y>
-      <w>84</w>
-      <h>156</h>
+      <x>405</x>
+      <y>279</y>
+      <w>63</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 noshift</panel_attributes>
@@ -218,24 +119,61 @@ noshift</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>348</x>
-      <y>144</y>
-      <w>60</w>
-      <h>156</h>
+      <x>495</x>
+      <y>279</y>
+      <w>45</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>lt=-&gt;&gt;
 shift</panel_attributes>
     <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>261</y>
+      <w>315</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+not onground</panel_attributes>
+    <additional_attributes>330.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>531</x>
+      <y>387</y>
+      <w>297</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+not onground</panel_attributes>
+    <additional_attributes>310.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>531</x>
+      <y>567</y>
+      <w>297</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+not onground</panel_attributes>
+    <additional_attributes>310.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>660</x>
-      <y>72</y>
-      <w>240</w>
-      <h>96</h>
+      <x>162</x>
+      <y>405</y>
+      <w>135</w>
+      <h>216</h>
     </coordinates>
-    <panel_attributes>bigjump
+    <panel_attributes>jump
+
 
 </panel_attributes>
     <additional_attributes/>
@@ -243,25 +181,37 @@ shift</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>372</x>
-      <y>60</y>
-      <w>312</w>
-      <h>48</h>
+      <x>288</x>
+      <y>405</y>
+      <w>126</w>
+      <h>36</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;&gt;
+    <panel_attributes>lt=&lt;&lt;-
 jump</panel_attributes>
-    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>372</x>
-      <y>108</y>
-      <w>312</w>
-      <h>48</h>
+      <x>288</x>
+      <y>585</y>
+      <w>135</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
-onground</panel_attributes>
-    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+jump</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>189</x>
+      <y>612</y>
+      <w>675</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+not onground</panel_attributes>
+    <additional_attributes>730.0;50.0;730.0;170.0;10.0;160.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
