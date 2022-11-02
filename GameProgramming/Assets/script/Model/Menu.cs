@@ -22,7 +22,7 @@ public class Menu : MonoBehaviour
         set 
             {
                 Generaties.maxValue = fieldModels.Count() - 1;
-                Generaties.value += value; 
+                Generaties.value = value; 
                 
             }
     }
@@ -67,7 +67,7 @@ public class Menu : MonoBehaviour
     }
     public void GoBack()
     {
-        Counter--;
+        Counter -= 1;
         if(Counter < 0){Counter = 0;}
         else{
              field.SetBuildField(fieldModels[Counter]);
@@ -75,11 +75,13 @@ public class Menu : MonoBehaviour
     }
     public void Next()
     {
-        Counter ++;
-        if(Counter >= fieldModels.Count()){nextGeneratie();}
-        else{
-             field.SetBuildField(fieldModels[Counter]);
-        }
+        if(Counter >= fieldModels.Count() -1 ){
+            nextGeneratie();
+            return;
+            }
+        Counter += 1;
+        field.SetBuildField(fieldModels[Counter]);
+        
     }
 
     public void NewField(){
