@@ -25,12 +25,12 @@ public class FieldModel
         this.list = list;
     }
 
-    public static FieldModel getBlank(float Row, float Colum)
+    public static FieldModel getBlank(float Row, float Colum, bool Alive)
     {
         List<bool> list = new List<bool>();
         for (int i = 0; i < Math.Round(Row * Colum, 0); i++)
         {
-            list.Add(false);
+            list.Add(Alive);
         }
         return new FieldModel( (float)Math.Round(Row, 0),   (float)Math.Round(Colum, 0),  list, -1);
     }

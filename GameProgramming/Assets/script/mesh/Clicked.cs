@@ -63,7 +63,11 @@ public class Clicked : MonoBehaviour
                 matrial.color = Color.white;
             }
         }else{
-            matrial.color = Color.black;
+            if(Grey){
+                matrial.color = new Color(0.1f, 0.1f, 0.1f, 1);
+            }else{
+               matrial.color = Color.black;
+            }
         }
     }
 

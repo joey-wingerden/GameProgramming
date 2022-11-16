@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -83,11 +84,15 @@ public class Menu : MonoBehaviour
         field.SetBuildField(fieldModels[Counter]);
         
     }
-
+    private bool DeafaultAlive = false;
     public void NewField(){
-        AddField(FieldModel.getBlank(float.Parse(Rows.text), float.Parse(Colums.text)));
+        AddField(FieldModel.getBlank(float.Parse(Rows.text), float.Parse(Colums.text), DeafaultAlive));
         Counter = fieldModels.Count() - 1;
         field.SetBuildField(fieldModels[Counter]);
+    }
+
+    public void SwitchDeafaultAlive(Boolean Alive){
+        DeafaultAlive = Alive;
     }
     private bool AddField(FieldModel newfield){
         if(fieldModels.Count() == 0){
