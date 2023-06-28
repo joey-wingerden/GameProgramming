@@ -74,7 +74,7 @@ public class Game : MonoBehaviour
 
     public void ResetGame()
     {
-        GameObjects.ForEach(A => A.SetActive(false));
+        GameObjects.ForEach(A => Destroy(A));
         Blocks = new List<PlayerMovement>();
         GameObjects = new List<GameObject>();
     }

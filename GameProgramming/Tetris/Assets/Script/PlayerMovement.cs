@@ -15,11 +15,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     public bool isGrounded;
     public bool Tetris;
+    
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        //rb.simulated = false;
+
     }
 
     private void Update()
@@ -27,54 +29,38 @@ public class PlayerMovement : MonoBehaviour
         //check if is on the ground or not
         if (!isGrounded)
         {
-            if(Tetris)
-            {
-                TetrisMovement();
-            }else
-            {
-                DropMovement();
-            }
+            TetrisMovement();
+            RotatePrefab();
         }
         
     }
 
-    private void DropMovement()
-    {
-        // Read input for movement
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
-        Vector2 movement = new Vector2(horizontalInput, verticalInput);
-
-        // // Jumping
-        // if (Input.GetButtonDown("Jump") && isGrounded)
-        // {
-        //     rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-        //     isGrounded = false;
-        // }
-
-        // Move the player
-        rb.velocity = new Vector2(movement.x * moveSpeed, rb.velocity.y);
-    }
      private void TetrisMovement()
     {
         
         //Check for input to move the spawned prefab
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            MovePrefab(Vector3.left / 2 );
+            MovePrefab(Vector3.left  );
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
-            MovePrefab(Vector3.right / 2);
+            MovePrefab(Vector3.right );
         }
         else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             MovePrefab(Vector3.down);
         }
-
+        if(!isGrounded)
+        {
+            
+            //MovePrefab(Vector3.down);
+            
+        
+        }
         
          // Check for user input to rotate the object
-        RotatePrefab();
+        
     }
     private void MovePrefab(Vector3 direction)
     {
@@ -98,11 +84,11 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Debug.Log("rotate");
-                transform.Rotate(Vector3.forward * 45);
+                transform.Rotate(Vector3.forward * 90);
             }
             else if (Input.GetKeyDown(KeyCode.E))
             {
-                transform.Rotate(Vector3.back * 45);
+                transform.Rotate(Vector3.back * 90);
             }
 
             // Update the timer
@@ -116,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!isGrounded)
         {
+             rb.simulated = true;
             //Debug.Log("LOg");
             
         }
