@@ -20,19 +20,20 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector3(0, -5, 0);
         //rb.simulated = false;
 
     }
 
-    private void Update()
+    public void Update()
     {
         //check if is on the ground or not
-        if (!isGrounded)
+        if (!isGrounded && rb.simulated)
         {
             TetrisMovement();
             RotatePrefab();
         }
-        
     }
 
      private void TetrisMovement()
@@ -41,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         //Check for input to move the spawned prefab
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
-            MovePrefab(Vector3.left  );
+            MovePrefab(Vector3.left);
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             MovePrefab(Vector3.down);
+            
         }
         if(!isGrounded)
         {
@@ -77,8 +79,7 @@ public class PlayerMovement : MonoBehaviour
     private void RotatePrefab()
     {
         // Check if enough time has passed since the last movement
-        
-            Debug.Log(transform.rotation.z);
+            
             // Move the spawned prefab in the specified direction
             // Rotate the prefab based on user input
             if (Input.GetKeyDown(KeyCode.Q))
@@ -90,19 +91,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.Rotate(Vector3.back * 90);
             }
-
-            // Update the timer
-         
-
-        
     }
+
+    
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(!isGrounded)
         {
-             rb.simulated = true;
+            //rb.velocity = new Vector2(0, 0);
+            rb.gravityScale = 0.5f;
+            rb.simulated = true;
             //Debug.Log("LOg");
             
         }
@@ -113,13 +113,21 @@ public class PlayerMovement : MonoBehaviour
     {
         return rb.position.y < below;
     }
-    public float Getheigt()
+    public float GetCamaraheigt()
     {
         if(isGrounded)
         {
             return rb.position.y;
         }
         return 0;
+    }
+    public float Getheigt()
+    {
+        return rb.position.y;      
+    }
+    public void simulated(bool onoff)
+    {
+        rb.simulated = onoff;
     }
 
 

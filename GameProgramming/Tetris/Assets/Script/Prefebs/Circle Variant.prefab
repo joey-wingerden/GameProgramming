@@ -59,6 +59,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.8828125
       objectReference: {fileID: 0}
+    - target: {fileID: 9090331046915748654, guid: a729e8ae38ad6754bbbdbc180942cb09, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9090331046915748654, guid: a729e8ae38ad6754bbbdbc180942cb09, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9090331046915748655, guid: a729e8ae38ad6754bbbdbc180942cb09, type: 3}
       propertyPath: m_Sprite
       value: 
