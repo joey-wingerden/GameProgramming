@@ -16,8 +16,8 @@ public class Movingplatform : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        navMeshAgent = player.GetComponent<NavMeshAgent>();
+        //player = GameObject.FindGameObjectWithTag("Player").transform;
+        //navMeshAgent = player.GetComponent<NavMeshAgent>();
         currentWaypointIndex = 0;
         isMoving = true;
 
