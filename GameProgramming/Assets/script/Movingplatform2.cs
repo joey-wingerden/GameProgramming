@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Movingplatform : MonoBehaviour
+public class Movingplatform2 : MonoBehaviour
 {
     public Vector3[] waypoints;
     public float speed = 2f;
