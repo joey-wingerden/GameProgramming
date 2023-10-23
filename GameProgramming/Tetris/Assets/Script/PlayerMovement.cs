@@ -40,15 +40,15 @@ public class PlayerMovement : MonoBehaviour
     {
         
         //Check for input to move the spawned prefab
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if (KeyBinds.left) //(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
         {
             MovePrefab(Vector3.left);
         }
-        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        else if (KeyBinds.Richt)//(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             MovePrefab(Vector3.right );
         }
-        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+        else if (KeyBinds.Down)//(Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             MovePrefab(Vector3.down);
             
@@ -82,12 +82,11 @@ public class PlayerMovement : MonoBehaviour
             
             // Move the spawned prefab in the specified direction
             // Rotate the prefab based on user input
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (KeyBinds.rotateL)//(Input.GetKeyDown(KeyCode.Q))
             {
-                Debug.Log("rotate");
                 transform.Rotate(Vector3.forward * 90);
             }
-            else if (Input.GetKeyDown(KeyCode.E))
+            else if (KeyBinds.rotateR) //(Input.GetKeyDown(KeyCode.E))
             {
                 transform.Rotate(Vector3.back * 90);
             }

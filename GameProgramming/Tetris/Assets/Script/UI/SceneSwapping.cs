@@ -21,9 +21,8 @@ public class SceneSwapping : MonoBehaviour
     public void ResetGame()
     {
         
-        if (game.gamePauze)
+        if (true || game.gamePauze)
         {
-            Debug.Log("console");
             Menus.enabled = false;
             GameOverLay.enabled = true;
 

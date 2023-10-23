@@ -14,6 +14,8 @@ public class leaderBoord : MonoBehaviour
     {
         leaderBoords.Add("Heigt", GetLeaderBoord("Heigt"));
         leaderBoords.Add("BlockPlaced", GetLeaderBoord("BlockPlaced"));
+        ClearLeaderboord("BlockPlaced");
+        ClearLeaderboord("Heigt");
         SetLeaderBoord();
 
     }

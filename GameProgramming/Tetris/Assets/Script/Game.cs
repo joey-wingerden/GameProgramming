@@ -16,6 +16,7 @@ public class Game : MonoBehaviour
     
     public bool GameRunning = false;
     public bool gamePauze = false;
+    public leaderBoord leaderBoord;
 
     public SceneSwapping Swapping;
     private List<Color> spawnColors = new List<Color>() {Color.blue, Color.green, Color.red, Color.yellow, Color.cyan, Color.magenta}; // Color to apply to the spawned prefab
@@ -75,7 +76,7 @@ public class Game : MonoBehaviour
                 }
                 
                 
-                if (Input.GetKeyDown(KeyCode.Escape) )
+                if (KeyBinds.Pauze)
                 {
                     
                     if(!gamePauze)
@@ -94,18 +95,18 @@ public class Game : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown(KeyCode.Escape))
+                if (KeyBinds.Pauze)
                 {
                     
                     Swapping.ResetGame();
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.R))
+            if (KeyBinds.Reset)
                 {
+                    leaderBoord.updateLeaderboord("Heigt", (int) GetMaxheigt(), "No Name");
+                    leaderBoord.updateLeaderboord("BlockPlaced", (int) GetTotalBlocks(), "No Name");
                     Swapping.ResetGame();
-                    Debug.Log(true);
-                    
                 }
         }
     }
