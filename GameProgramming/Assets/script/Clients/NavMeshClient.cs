@@ -17,18 +17,26 @@ public class NavMeshClient : MonoBehaviour
     
     public bool spanner = false;
     public GameObject agent;
+    public bool Moventdirect;
     public void SetCordinates(Vector3 Cords)
     {
-         if(!spanner){
-            //cords[counter] = Cords;
-            //Agent.SetDestination(cords[counter]);
-            //position[counter].transform.position = cords[counter];
-            position[counter].transform.position = Cords;
-        }else
+        if(Moventdirect)
         {
-            Instantiate(agent, Cords, Quaternion.identity);
+             Agent.SetDestination(Cords);
+             position[counter].transform.position = Cords;
         }
-        
+        else
+        {
+            if(!spanner){
+                //cords[counter] = Cords;
+                //Agent.SetDestination(cords[counter]);
+                //position[counter].transform.position = cords[counter];
+                position[counter].transform.position = Cords;
+            }else
+            {
+                Instantiate(agent, Cords, Quaternion.identity);
+            }
+        }
     }
 
     public void SetActive(bool active)
@@ -42,6 +50,7 @@ public class NavMeshClient : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(true);
         if(!spanner){
             Agent = gameObject.GetComponent<NavMeshAgent>();
         }
@@ -52,7 +61,7 @@ public class NavMeshClient : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!spanner)
+        if(!spanner && !Moventdirect)
             {
             //if(transform.position.x == cords[counter].x && transform.position.z == cords[counter].z)
             if(transform.position.x == position[counter].transform.position.x && transform.position.z == position[counter].transform.position.z)
@@ -79,5 +88,6 @@ public class NavMeshClient : MonoBehaviour
         }
         //Agent.SetDestination(cords);        
     }
+
     
 }
