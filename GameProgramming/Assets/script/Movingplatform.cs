@@ -26,6 +26,7 @@ public class Movingplatform : MonoBehaviour
             // Move the platform to the initial waypoint
             transform.position = waypoints[currentWaypointIndex];
         }
+        
     }
 
     private void  FixedUpdate()

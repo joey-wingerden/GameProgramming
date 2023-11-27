@@ -28,7 +28,7 @@ public class MouseLocationMovementScript : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 var agent2 = hit.transform.gameObject.GetComponent<NavMeshClient>();
-                if (agent2 != null)
+                if (agent2 != null && false)
                 {
                     if(agent != null)
                     {
